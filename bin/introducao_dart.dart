@@ -1,28 +1,47 @@
+import 'package:introducao_dart/aula2/produto.dart';
 import 'package:introducao_dart/logic.dart' as introducao_dart;
 
 void main(List<String> arguments) {
+  // Produto produtoObjeto = Produto(
+  //   nome: "lapis",
+  //   id: 1,
+  //   cor: "azul",
+  // );
+
+  // produtoObjeto.detalhesProduto();
+
+  Eletronico eletronicoObjeto = Eletronico(
+    corParametro: "branco",
+    marca: 'xpto',
+    garantiaMeses: 4,
+    nomeParametro: 'microondas',
+    idParametro: 2,
+  );
+
+  eletronicoObjeto.detalhesEletronico();
+  eletronicoObjeto.detalhesProduto();
 
   //*****TRABALHANDO COM MAPS**********
-  Map<String, dynamic> estruturaPessoa = {
-    "nome": "felipe",
-    "idade": 18,
-    "endereco": "fgddg",
-    "conjuge": {
-      "nome": "nome do conjuge",      
-    },
-    "telefones":[
-      {
-        "residencial": "1243",
-      },
-      {
-        "celular": "8987989",
-      }
-    ]
-  };
+  // Map<String, dynamic> estruturaPessoa = {
+  //   "nome": "felipe",
+  //   "idade": 18,
+  //   "endereco": "fgddg",
+  //   "conjuge": {
+  //     "nome": "nome do conjuge",
+  //   },
+  //   "telefones":[
+  //     {
+  //       "residencial": "1243",
+  //     },
+  //     {
+  //       "celular": "8987989",
+  //     }
+  //   ]
+  // };
 
-  String nomeConjuge = estruturaPessoa['conjuge']['nome'];
+  // String nomeConjuge = estruturaPessoa['conjuge']['nome'];
 
-  print(nomeConjuge);
+  // print(nomeConjuge);
 
   //*****TRABALHANDO COM SETS**********
   // var lista = <int>[];
@@ -58,7 +77,6 @@ void main(List<String> arguments) {
   // final (texto, outronumero) = introducao_dart.exemploRecords(numero);
 
   // print("texto: " + texto + " numero: " + outronumero.toString());
-
 
   //*****TRABALHANDO COM BOOL**********
   // bool valor1 = true;
