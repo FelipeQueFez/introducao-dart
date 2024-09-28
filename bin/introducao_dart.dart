@@ -17,8 +17,7 @@ void main(List<String> arguments) {
     nomeParametro: 'microondas',
     idParametro: 2,
   );
-
-  eletronicoObjeto.detalhesEletronico();
+  
   eletronicoObjeto.detalhesProduto();
 
   //*****TRABALHANDO COM MAPS**********

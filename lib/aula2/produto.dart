@@ -1,18 +1,20 @@
 class Produto {
   final String nome;
   final int id;
-  final String cor;
+  String _cor = "azul";
 
   Produto({
     required this.nome,
     required this.id,
-    required this.cor,
-  });
+    required String corParametro,
+  }) {
+    _cor = corParametro;
+  }
 
   void detalhesProduto() {
     print("nome: " + this.nome);
     print("id: " + this.id.toString());
-    print("cor: " + this.cor);
+    print("cor: " + this._cor);
   }
 }
 
@@ -26,9 +28,9 @@ class Eletronico extends Produto {
     required String nomeParametro,
     required int idParametro,
     required String corParametro,
-  }) :super(cor: corParametro, id: idParametro, nome: nomeParametro);
+  }) :super(corParametro: corParametro, id: idParametro, nome: nomeParametro);
 
-  void detalhesEletronico() {
+  void _detalhesEletronico() {
     print('marca: ' + this.marca);
     print('garantia: ' + this.garantiaMeses.toString());
   }
