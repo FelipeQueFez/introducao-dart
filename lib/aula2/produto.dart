@@ -34,5 +34,11 @@ class Eletronico extends Produto {
     print('marca: ' + this.marca);
     print('garantia: ' + this.garantiaMeses.toString());
   }
+  
+  @override
+  void detalhesProduto() {
+    super.detalhesProduto();
+    _detalhesEletronico();
+  }
 }
 
