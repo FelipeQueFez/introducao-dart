@@ -1,7 +1,51 @@
+import 'package:introducao_dart/aula2/cliente.dart';
+import 'package:introducao_dart/aula2/livro.dart';
+import 'package:introducao_dart/aula2/pedido.dart';
 import 'package:introducao_dart/aula2/produto.dart';
+import 'package:introducao_dart/aula2/sistema_loja.dart';
 import 'package:introducao_dart/logic.dart' as introducao_dart;
 
 void main(List<String> arguments) {
+  SistemaLoja sistemaObjeto = SistemaLoja(pedidos: []);
+
+  Cliente clienteObjeto = Cliente(
+    nome: 'fulano',
+    email: 'email@fulano.com',
+  );
+
+  List<Produto> carrinho = [];
+  Livro livroObjeto = Livro(
+    autor: "Jose",
+    nomeParametro: 'galaxia',
+    idParametro: 3,
+    precoParametro: 19.90,
+  );
+
+  Produto produtoObjeto = Produto(
+    nome: 'caixa',
+    id: 1,
+    preco: 10,
+  );
+
+  Produto produto2Objeto = Produto(
+    nome: 'papel',
+    id: 2,
+    preco: 20,
+  );
+
+  carrinho.add(produtoObjeto);
+  carrinho.add(produto2Objeto);
+  carrinho.add(livroObjeto);
+
+  Pedido pedidoObjeto = Pedido(
+    cliente: clienteObjeto,
+    items: carrinho,
+  );
+
+  sistemaObjeto.adicionarPedido(pedidoObjeto);
+
+  sistemaObjeto.listaPedidos();
+
   // Produto produtoObjeto = Produto(
   //   nome: "lapis",
   //   id: 1,
@@ -10,15 +54,15 @@ void main(List<String> arguments) {
 
   // produtoObjeto.detalhesProduto();
 
-  Eletronico eletronicoObjeto = Eletronico(
-    corParametro: "branco",
-    marca: 'xpto',
-    garantiaMeses: 4,
-    nomeParametro: 'microondas',
-    idParametro: 2,
-  );
-  
-  eletronicoObjeto.detalhesProduto();
+  // Eletronico eletronicoObjeto = Eletronico(
+  //   corParametro: "branco",
+  //   marca: 'xpto',
+  //   garantiaMeses: 4,
+  //   nomeParametro: 'microondas',
+  //   idParametro: 2,
+  // );
+
+  // eletronicoObjeto.detalhesProduto();
 
   //*****TRABALHANDO COM MAPS**********
   // Map<String, dynamic> estruturaPessoa = {

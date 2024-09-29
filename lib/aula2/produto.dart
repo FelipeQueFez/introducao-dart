@@ -1,44 +1,19 @@
 class Produto {
-  final String nome;
-  final int id;
-  String _cor = "azul";
+  int id;
+  String nome;
+  double preco;
 
   Produto({
-    required this.nome,
     required this.id,
-    required String corParametro,
-  }) {
-    _cor = corParametro;
-  }
+    required this.nome,
+    required this.preco,
+  });
 
   void detalhesProduto() {
-    print("nome: " + this.nome);
-    print("id: " + this.id.toString());
-    print("cor: " + this._cor);
+    print('id: ' + this.id.toString());
+    print('nome: ' + this.nome);
+    print('preco: ' + this.preco.toString());
   }
 }
 
-class Eletronico extends Produto {
-  final String marca;
-  final int garantiaMeses;
-
-  Eletronico({
-    required this.marca,
-    required this.garantiaMeses,
-    required String nomeParametro,
-    required int idParametro,
-    required String corParametro,
-  }) :super(corParametro: corParametro, id: idParametro, nome: nomeParametro);
-
-  void _detalhesEletronico() {
-    print('marca: ' + this.marca);
-    print('garantia: ' + this.garantiaMeses.toString());
-  }
-  
-  @override
-  void detalhesProduto() {
-    super.detalhesProduto();
-    _detalhesEletronico();
-  }
-}
 
