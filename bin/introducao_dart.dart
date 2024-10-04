@@ -10,8 +10,11 @@ import 'package:my_simple_package/my_simple_package.dart';
 void main(List<String> arguments) async {
   print("inicializando a aplicacao");
 
-  await findAll();
+  ClientInterceptor client = ClientInterceptor();
+
+  await findAll(client);
   await create(
+    client,
     CreatePostModel(
       id: 123,
       title: 'Nome do filme de 123',
@@ -20,6 +23,7 @@ void main(List<String> arguments) async {
   );
 
   await updateOne(
+    client,
     CreatePostModel(
       id: 123,
       title: 'outro filme',
@@ -27,5 +31,5 @@ void main(List<String> arguments) async {
     ),
   );
 
-  await deleteOne(1);
+  await deleteOne(client, 1);
 }
