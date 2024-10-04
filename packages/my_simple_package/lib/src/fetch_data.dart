@@ -2,10 +2,8 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-import 'urls.dart';
-
-Future<void> fetchPost() async {
-  final response = await http.get(Uri.parse(urlBase));  
+Future<void> fetchData() async {
+  final response = await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts"));  
 
   if(response.statusCode == 200) {
     var data = jsonDecode(response.body);

@@ -11,8 +11,11 @@ dependencies:
   # path: ^1.8.0
   intl: ^0.19.0 
   my_simple_package: 
-    path: ./packages/my_simple_package
-
+  path: ./packages/my_simple_package
+    # git:
+    #   url: https://github.com/FelipeQueFez/introducao-dart
+    #   path: ./packages/my_simple_package
+    #   ref: main
 
 dev_dependencies:
   lints: ^4.0.0
